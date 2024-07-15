@@ -1,71 +1,125 @@
-# Azure Monitoring 1-day Workshop
 
-[Setup Guide](https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Guides/Deployment%20Setup%20Guide.docx?raw=true)
+# Azure Monitor Hackathon
 
-[Challenges](https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Guides/Challenges.pptx?raw=true)
+![Azure Monitor Hackathon](https://github.com/msghaleb/AzureMonitorHackathon/raw/master/images/header.jpg)  
+This hackathon walks you though the different features of Azure Monitor. Throughout the hackathon you will be working with Azure Monitor, Log Analytics and Application Insights.
 
-[Proctors Guide](https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Host/Proctors%20Guide.docx?raw=true)
-## Overview
-
-### This challenge-based Azure Monitoring workshop is intended to teach you how to monitor Azure workloads. During this day you will be working Azure Monitor, Log Analytics and Application Insights.
-
-## Outcome
-
-### Understand Azure Monitor capabilities, facilitate an Azure Monitor customer conversation, and demo key features of Azure Monitor.
+At the end of the Hackathon you will understand Azure Monitor capabilities, facilitate an Azure Monitor conversation, and demo key features of Azure Monitor.
+ 
+The design proposed here is not a recommendation, it's for learning purposes only.
+  
+> **Note**
+- If you fork this Repo, and updated it feel free to open a Pull Request, we'll add your name into the BIG THANK YOU LIST below :)
+- Please use **Firefox** when testing the eShop, wanna fix the bug? see above ;-)    
+  
 
 ## Target Audience
 
-### This content has been targeted to PFE, MCS, and CSA roles intended to build their knowledge on Azure Monitor.  PTS and TSP that have a passion around Monitoring are more than welcome to attend.
+  
+
+This hackathon is designed specifically for DevOps engineers, administrators and IT architects who want to build their knowledge on Azure Monitor. However, anyone with a passion around Monitoring is more than welcome to attend.
+
+  
 
 ## Prerequisites
 
-### 1.	Please review the following docs before or during the event when necessary
-[Send Guest OS metrics to the Azure Monitor metric store](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)
+We assume that you have a basic knowledge of Azure core services (e.g., networking, compute).
 
-[Get Started with Metrics Explorer](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-getting-started)
+  
 
-[View and Manage Alerts in Azure Portal](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric#view-and-manage-with-azure-portal)
+## Initial design
 
-[Create metric alerts with ARM templates](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric-create-templates)
+In the beginning of this hackathon, you will deploy an environment in Azure that consists of two Azure Resource Groups with different set of resources. These include the VNet, subnets, NSG(s), LB(s), NAT rules, scale set and a fully functional .NET Core Application (eShopOnWeb) to monitor, as you can see in the design below.
 
-[Create Action Rules](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-action-rules)
+  
 
-[Monitor your Kubernetes Cluster](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-analyze)
+![enter image description here](https://github.com/msghaleb/AzureMonitorHackathon/raw/master/images/initial_design.jpg)
 
-[View Kubernetes logs, events, and pod metrics in real-time](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-livedata-overview)
+  
+## Initial Deployment
+The initial deployment will create the components shown in the architecture above and is the basis for the challenges in this hackathon.
+To deploy the components, please follow the steps in [this deployment section](deployment/README.md)
 
-[Start Monitoring Your ASP.NET Core Web Application](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/dotnetcore-quick-start)
+## The Challenges
 
-[What does Application Insights Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview#what-does-application-insights-monitor)
+This Hackathon consists of 8 challenges. Please complete the challenges in order.
 
-[Grafana Integration](https://grafana.com/grafana/plugins/grafana-azure-monitor-datasource)
+-  [Challenge 1: Activity Log & Service Health](challenges/challenge1.md)
 
-[Create interactive reports with workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-workbooks)
+-  [Challenge 2: The Basics, Dashboards and Alerts](challenges/challenge2.md)
 
-### 2.	Attendees have access to an Azure Subscription where they can each deploy the provided ARM template that will build a very detailed infrastructure to monitor.  This includes the Vnet, subnets, NSG(s), LB(s), NAT rules, scales set and a fully functional .NET Core Application (eShopOnWeb) to monitor.
-### 3.	Attendees should have a level 200-300 understanding of the Azure platform.  Understand concepts like PowerShell, Azure Cli, ARM, resource groups, RBAC, network, storage, compute, scale sets, virtual machines and security.  Previous experience working with ARM templates is recommended.
-### 4.	Access to a machine with Visual Studio Code and the Azure PowerShell Modules loaded or Azure CLI. VS Code ARM and PowerShell extensions should be configured.
+-  [Challenge 3: Workbooks](challenges/challenge3.md)
 
-![alt text](https://raw.githubusercontent.com/rkuehfus/pre-ready-2019-H1/master/monitoringhackdiagram.png)
+-  [Challenge 4: KQL Queries](challenges/challenge4.md)
 
-# Agenda
+-  [Challenge 5: Containers Monitoring](challenges/challenge5.md)
 
-### 8:30 – 9:00 AM: Kickoff & Introductions
+-  [Challenge 6: Grafana and Analytics](challenges/challenge6.md)
 
-### 9:00  - 10:30 AM: Azure Monitor Metrics & Alerts Challenge
+-  [Challenge 7: Application Insights](challenges/challenge7.md)
 
-### 10:30 - 10:45 AM: Break
+-  [Challenge 8: Update Management](challenges/challenge8.md)
+  
 
-### 10:45  - Noon: Azure Monitor Application Insights Challenge
+## Useful links
 
-### Noon – 1 PM: Lunch
+  
 
-### 1 – 3 PM: Azure Monitor for containers Challenge 
+### These links are your cheat sheet ;-) You can read them prior or during the hackathon
 
-### 3 – 3:15 PM: Break
+  
 
-### 3:15 – 4 PM: Azure Monitor Logs Challenge
+-  [Send Guest OS metrics to the Azure Monitor metric store](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)
 
-### 4 – 5 PM:	Azure Monitor Dashboard and Analytics Challenge and/or Workbooks Challenge
+-  [Get Started with Metrics Explorer](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-getting-started)
 
+-  [View and Manage Alerts in Azure Portal](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric#view-and-manage-with-azure-portal)
 
+-  [Create metric alerts with ARM templates](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric-create-templates)
+
+-  [Create Action Rules](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-action-rules)
+
+-  [Monitor your Kubernetes Cluster](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-analyze)
+
+-  [View Kubernetes logs, events, and pod metrics in real-time](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-livedata-overview)
+
+-  [Start Monitoring Your ASP.NET Core Web Application](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/dotnetcore-quick-start)
+
+-  [What does Application Insights Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview#what-does-application-insights-monitor)
+
+-  [Grafana Integration](https://grafana.com/grafana/plugins/grafana-azure-monitor-datasource)
+
+-  [Create interactive reports with workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-workbooks)
+
+  
+  
+
+## Cleaning Up
+
+If you're done and would like to delete the Azure resources associated with this hackathon, please perform the following steps:
+
+- Delete the resource group `azuremon-xxxxx-rg`
+
+- Delete the Azure Monitor resources like alerts, etc.
+
+  
+
+## Big Thanks to
+
+-  [Martina Lang](https://www.linkedin.com/in/martina-lang-207912149/) for her help and support throughout our Azure Monitor Journey
+
+-  [Rob Kuehfus](https://github.com/rkuehfus/pre-ready-2019-H1) for initiating the idea and creating the very first Azure Monitor Hack - Rob is the one who invented the Exception in the eShop ;-)
+
+-  [Kayode Prince](https://github.com/kayodeprinceMS/AzureMonitorHackathon) for improving the original Azure Monitor Hack and supporting this one
+
+-  [Joerg Jooss](https://www.linkedin.com/in/joergjooss/) for his help with the Application Insights part
+
+>  **Tip:**  [StackEdit](https://stackedit.io/) is a great tool to write Markdown files
+
+  
+
+## TODO
+
+- Add Network Watcher
+
+- Azure Backup Reports
